@@ -4,7 +4,7 @@
 xmlns:fr="http://www.forester-notes.org"
 xmlns:html="http://www.w3.org/1999/xhtml"
 xmlns:xml="http://www.w3.org/XML/1998/namespace"
-root="true"
+root="false"
 base-url="/my-blog/"><fr:frontmatter><fr:authors /><fr:uri>https://will-xujun.github.io/my-blog/index/</fr:uri><fr:display-uri>index</fr:display-uri><fr:route>/my-blog/index/</fr:route><fr:title
 text="Xu Jun">Xu Jun</fr:title></fr:frontmatter><fr:mainmatter><html:p>I am a researcher in program semantics and verification.
 
