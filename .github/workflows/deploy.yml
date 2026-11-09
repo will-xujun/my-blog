@@ -29,17 +29,30 @@ jobs:
           ocaml-compiler: 5.3
           dune-cache: true
 
-      - name: Pin compatible LSP version
+      - name: Diagnose OPAM dependencies
         run: |
-          opam pin add lsp 1.23.1 --kind version --yes
+          echo "=== Installed packages ==="
+          opam list --installed --columns=name,version
+
+          echo "=== OPAM pins ==="
+          opam pin list
+
+          echo "=== LSP package metadata ==="
+          opam show lsp --field=all-versions
+            - name: Pin compatible LSP version
+              run: |
+                opam pin add lsp 1.23.1 --kind version --yes
+
+      - name: Pin LSP
+        run: opam pin add lsp 1.23.1 --kind version --yes
+
+      - name: Verify LSP pin
+        run: opam list --installed --columns=name,version
 
       - name: Install Forester
         run: |
           opam install forester --yes
       
-      - name: Install Forester
-        run: opam install forester
-
       - name: Build forest
         run: |
           eval "$(opam env)"
