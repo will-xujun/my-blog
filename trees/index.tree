@@ -1,0 +1,39 @@
+\title{Xu Jun}
+\p{I am a researcher in program semantics and verification.
+
+This blog documents my scientific ideas in various topics.}
+
+\p{
+A general theme is to provide unifying semantic guarantees for probabilistic programs and their associated logics.
+This is an ambitious project spanning different levels of abstraction.
+At the bottom, we have probability theory and many theorems are proven by classical analysis.
+This is particularly un-suitable for formal reasoning.
+Hence, one goal is to find a layer of axioms that separates the formal reasoning about programs and the underlying analysis obligations.
+I conjecture this can be done with new categorical foundations, such as Markov, QBS, Integrable Cones, Finite Valuation Approximable domains.
+}
+\p{
+Next, suppose we have a good logic to reason with probabilistic programs and have implemented it.
+We should seek to write different statistical techniques in a programming model, so that our logic can soundly reason with their denotations.
+The logic can also be directly deployed to reason with programs.
+}
+\p{
+Next, suppose we have a program describing some machine learning system component.
+Very likely, there are floating point operations in that program.
+Practical computers provide only an approximation to idealized operational and denotational semantics, which are formulated in ideal real numbers.
+Does there exist a set of rules which allows us to reason with such approximation compositionally? 
+What are the compromises?
+...
+}
+\p{
+I hope to answer as many of these questions as possible in the next 3 years.
+}
+
+\strong{Weekly Notes}
+
+\p{[Week45_2026](week45_2026)}
+
+\strong{Wild Ideas for Research}
+
+\p{[Algebraic Semantics and Categorical Characterization of Program Logics](random1)}
+
+\p{[Floating-point Separation Logic Specification Compilation](random2)}

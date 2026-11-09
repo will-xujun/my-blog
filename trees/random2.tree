@@ -1,0 +1,15 @@
+\title{End-to-end verified compilation of floating-point heap specifications}
+
+\p{
+Floating-point heap specification, for example in a separation logic, is a nontrivial problem.
+There exists logical machinery for this.
+}
+
+\p{
+End-to-end behaviour conformance of floating point programs, ABSENT heap manipulation, is also a solved problem.
+}
+
+\p{
+However, real-world floating-point programs obviously do not stay in local variables:they dynamically manipulate heap data structures containing floats, such as arrays and lists and trees with float.
+We would like to verify that the floating-point heap specifications at the source level pass to the target level.
+}

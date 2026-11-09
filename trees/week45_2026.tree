@@ -1,0 +1,45 @@
+\title{Weekly Report, Week 45, 2026}
+
+\p{
+For this week, there is progress in several directions.
+}
+
+\p{
+Firstly, re-familiarised definitions of a #{\mathbb{K}}-fibration, in particular the case where #{\mathbb{K}} is a subcategory of \strong{Poset}.
+Fibration ensures the existence and uniqueness of Cartesian liftings of morphisms in the underlying category, which is inherited by #{\mathbb{K}}.
+These liftings are seen concretely as a \em{predicate transform}, which connects between predicate objects in the total category.
+More generally, in effectful settings, we deal with \em{Monad liftings}, of the form #{(\dot T, \dot\eta, \dot\mu)}.
+The monad lifting transforms predicates into certain effectful versions.
+From this background, one can perform weakest precondition calculation in an effectul setting, which provides a semantic basis for Floyd-Hoare style logics.
+There is a general formula to build Cartesian monad liftings in the case of domain fibrations, and an associated wp operator.
+This is presented rather vaguely in \ref{aguirre2020} as #{\tau \circ \Phi \circ f}, but in more detail in the followup journal version.
+}
+
+\p{
+Secondly, the work of John Li on a probabilistic separation logic \ref{li2021} is investigated.
+Understand that discrete conditioning is viewed as modal operator, and independence can be viewed as separation.
+In this sense, random variable is seen as resource ownership, with possibly the same underlying probability space.
+His recent ambition is to develop wp for free in the sense of \ref{aguirre2020}.
+}
+
+\p{
+Thirdly, the work of Justin Hsu on probabilistic relational Hoare logic is investigated.
+The workings of pRHL in constructing couplings syntactically, is understood.
+In addition, several examples are worked out, including equivalence of output distributions, stochastic dominance, and (more briefly) convergence.
+There is suspiciously no mention of a weakest precondition calculus.
+I wonder if such calculus can be constructed and given a categorical wp interpretation in the sense of Aguirre.
+}
+
+\p{
+Fourthly, I started to introduce a Hoare logic for reasoning with higher-order functional invariants in probabilistic programs.
+The inspiration comes from a recent proof of tail bound for the CVM algorithm \ref{karayel2025}.
+Logical formulas of the form #{C \models \forall h\in SomeFuncSet. E[h(X)] \leq g(h)}, where g is some simple transformation on h.
+This would automatically generalize the usual Chernoff bounds; in fact judgments of this form is a realization of Cramer-Chernoff method.
+This would easily generalize a few useful identities in the first-order Hoare logic and its pre-expectation calculus.
+After this logic is introduced (including its assertion language and proof rules), a next step is to proof soundness and completeness with respect to some semantics.
+In particular, completeness is harder.
+Possible semantic models include the Schanuel topos and the BI-hyperdoctrine.
+They would be interesting to implement because of the probabilistic content.
+}
+
+

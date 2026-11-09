@@ -1,0 +1,6 @@
+\title{Algebraic Semantics and Categorical Characterization of Program Logics}
+
+\p{There is a duality between categorical constructs and logical systems.
+For propositional logic, the Stone duality states an isomorphism between presentations of Boolean algebras (quotients of the free Boolean algebra of a given signature) and logical systems in that signature.
+For Hoare and separation logics, however, there is no such categorical account.
+What should such an account look like?}
