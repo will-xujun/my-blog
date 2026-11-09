@@ -1,9 +1,12 @@
-name: Deploy Forester to GitHub Pages
+name: Deploy Forester Website
 
 on:
   push:
     branches:
       - main
+    paths:
+      - 'output/**'
+      - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
 permissions:
@@ -16,58 +19,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-
-      - name: Setup OCaml
-        uses: ocaml/setup-ocaml@v3
-        with:
-          ocaml-compiler: 5.3
-          dune-cache: true
-
-      - name: Diagnose OPAM dependencies
-        run: |
-          echo "=== Installed packages ==="
-          opam list --installed --columns=name,version
-
-          echo "=== OPAM pins ==="
-          opam pin list
-
-          echo "=== LSP package metadata ==="
-          opam show lsp --field=all-versions
-            - name: Pin compatible LSP version
-              run: |
-                opam pin add lsp 1.23.1 --kind version --yes
-
-      - name: Pin LSP
-        run: opam pin add lsp 1.23.1 --kind version --yes
-
-      - name: Verify LSP pin
-        run: opam list --installed --columns=name,version
-
-      - name: Install Forester
-        run: |
-          opam install forester --yes
-      
-      - name: Build forest
-        run: |
-          eval "$(opam env)"
-          forester build
-
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload website
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: output/
-
   deploy:
-    needs: build
     runs-on: ubuntu-latest
 
     environment:
@@ -75,6 +27,14 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Upload website artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: output/
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
