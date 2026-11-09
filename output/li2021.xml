@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree
+toc="true"
+numbered="true"
+show-heading="true"
+show-metadata="true"
+expanded="true"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>238</fr:anchor><fr:addr
+type="user">li2021</fr:addr><fr:route>li2021.xml</fr:route><fr:title
+text="Lilac: A Modal Separation Logic for Conditional Probability">Lilac: A Modal Separation Logic for Conditional Probability</fr:title><fr:taxon>Paper</fr:taxon><fr:date><fr:year>2023</fr:year></fr:date><fr:authors><fr:author>John m. Li, Amal Ahmed, Steven Holtzen</fr:author></fr:authors></fr:frontmatter><fr:mainmatter /><fr:backmatter><fr:tree
+toc="false"
+numbered="false"
+show-heading="true"
+show-metadata="false"
+expanded="true"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title
+text="Backlinks">Backlinks</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:tree
+toc="true"
+numbered="false"
+show-heading="true"
+show-metadata="true"
+expanded="false"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>240</fr:anchor><fr:addr
+type="user">week45_2026</fr:addr><fr:route>week45_2026.xml</fr:route><fr:title
+text="Weekly Report, Week 45, 2026">Weekly Report, Week 45, 2026</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p>For this week, there is progress in several directions.</fr:p><fr:p>Firstly, re-familiarised definitions of a <fr:tex
+display="inline"><![CDATA[\mathbb {K}]]></fr:tex>-fibration, in particular the case where <fr:tex
+display="inline"><![CDATA[\mathbb {K}]]></fr:tex> is a subcategory of <fr:strong>Poset</fr:strong>.
+Fibration ensures the existence and uniqueness of Cartesian liftings of morphisms in the underlying category, which is inherited by <fr:tex
+display="inline"><![CDATA[\mathbb {K}]]></fr:tex>.
+These liftings are seen concretely as a <fr:em>predicate transform</fr:em>, which connects between predicate objects in the total category.
+More generally, in effectful settings, we deal with <fr:em>Monad liftings</fr:em>, of the form <fr:tex
+display="inline"><![CDATA[(\dot  T, \dot \eta , \dot \mu )]]></fr:tex>.
+The monad lifting transforms predicates into certain effectful versions.
+From this background, one can perform weakest precondition calculation in an effectul setting, which provides a semantic basis for Floyd-Hoare style logics.
+There is a general formula to build Cartesian monad liftings in the case of domain fibrations, and an associated wp operator.
+This is presented rather vaguely in <fr:ref
+addr="aguirre2020"
+href="aguirre2020.xml"
+taxon="Paper" /> as <fr:tex
+display="inline"><![CDATA[\tau  \circ  \Phi  \circ  f]]></fr:tex>, but in more detail in the followup journal version.</fr:p><fr:p>Secondly, the work of John Li on a probabilistic separation logic <fr:ref
+addr="li2021"
+href="li2021.xml"
+taxon="Paper" /> is investigated.
+Understand that discrete conditioning is viewed as modal operator, and independence can be viewed as separation.
+In this sense, random variable is seen as resource ownership, with possibly the same underlying probability space.
+His recent ambition is to develop wp for free in the sense of <fr:ref
+addr="aguirre2020"
+href="aguirre2020.xml"
+taxon="Paper" />.</fr:p><fr:p>Thirdly, the work of Justin Hsu on probabilistic relational Hoare logic is investigated.
+The workings of pRHL in constructing couplings syntactically, is understood.
+In addition, several examples are worked out, including equivalence of output distributions, stochastic dominance, and (more briefly) convergence.
+There is suspiciously no mention of a weakest precondition calculus.
+I wonder if such calculus can be constructed and given a categorical wp interpretation in the sense of Aguirre.</fr:p><fr:p>Fourthly, I started to introduce a Hoare logic for reasoning with higher-order functional invariants in probabilistic programs.
+The inspiration comes from a recent proof of tail bound for the CVM algorithm <fr:ref
+addr="karayel2025"
+href="karayel2025.xml" />.
+Logical formulas of the form <fr:tex
+display="inline"><![CDATA[C \models  \forall  h\in  SomeFuncSet. E[h(X)] \leq  g(h)]]></fr:tex>, where g is some simple transformation on h.
+This would automatically generalize the usual Chernoff bounds; in fact judgments of this form is a realization of Cramer-Chernoff method.
+This would easily generalize a few useful identities in the first-order Hoare logic and its pre-expectation calculus.
+After this logic is introduced (including its assertion language and proof rules), a next step is to proof soundness and completeness with respect to some semantics.
+In particular, completeness is harder.
+Possible semantic models include the Schanuel topos and the BI-hyperdoctrine.
+They would be interesting to implement because of the probabilistic content.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree></fr:mainmatter><fr:backmatter /></fr:tree></fr:backmatter></fr:tree>

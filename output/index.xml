@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="default.xsl"?>
+<fr:tree
+toc="true"
+numbered="true"
+show-heading="true"
+show-metadata="true"
+expanded="true"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>256</fr:anchor><fr:addr
+type="user">index</fr:addr><fr:route>index.xml</fr:route><fr:title
+text="Xu Jun">Xu Jun</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p>Fuckyou, I am a researcher in program semantics and verification.
+
+This blog documents my scientific ideas in various topics.</fr:p><fr:p>A general theme is to provide unifying semantic guarantees for probabilistic programs and their associated logics.
+This is an ambitious project spanning different levels of abstraction.
+At the bottom, we have probability theory and many theorems are proven by classical analysis.
+This is particularly un-suitable for formal reasoning.
+Hence, one goal is to find a layer of axioms that separates the formal reasoning about programs and the underlying analysis obligations.
+I conjecture this can be done with new categorical foundations, such as Markov, QBS, Integrable Cones, Finite Valuation Approximable domains.</fr:p><fr:p>Next, suppose we have a good logic to reason with probabilistic programs and have implemented it.
+We should seek to write different statistical techniques in a programming model, so that our logic can soundly reason with their denotations.
+The logic can also be directly deployed to reason with programs.</fr:p><fr:p>Next, suppose we have a program describing some machine learning system component.
+Very likely, there are floating point operations in that program.
+Practical computers provide only an approximation to idealized operational and denotational semantics, which are formulated in ideal real numbers.
+Does there exist a set of rules which allows us to reason with such approximation compositionally? 
+What are the compromises?
+...</fr:p><fr:p>I hope to answer as many of these questions as possible in the next 3 years.</fr:p><fr:strong>Weekly Notes</fr:strong><fr:p><fr:link
+type="local"
+href="week45_2026.xml"
+addr="week45_2026"
+title="Weekly Report, Week 45, 2026">Week45_2026</fr:link></fr:p><fr:strong>Wild Ideas for Research</fr:strong><fr:p><fr:link
+type="local"
+href="random1.xml"
+addr="random1"
+title="Algebraic Semantics and Categorical Characterization of Program Logics">Algebraic Semantics and Categorical Characterization of Program Logics</fr:link></fr:p><fr:p><fr:link
+type="local"
+href="random2.xml"
+addr="random2"
+title="End-to-end verified compilation of floating-point heap specifications">Floating-point Separation Logic Specification Compilation</fr:link></fr:p></fr:mainmatter><fr:backmatter><fr:tree
+toc="false"
+numbered="false"
+show-heading="true"
+show-metadata="false"
+expanded="true"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:title
+text="Related">Related</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:tree
+toc="true"
+numbered="false"
+show-heading="true"
+show-metadata="true"
+expanded="false"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>257</fr:anchor><fr:addr
+type="user">random1</fr:addr><fr:route>random1.xml</fr:route><fr:title
+text="Algebraic Semantics and Categorical Characterization of Program Logics">Algebraic Semantics and Categorical Characterization of Program Logics</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p>There is a duality between categorical constructs and logical systems.
+For propositional logic, the Stone duality states an isomorphism between presentations of Boolean algebras (quotients of the free Boolean algebra of a given signature) and logical systems in that signature.
+For Hoare and separation logics, however, there is no such categorical account.
+What should such an account look like?</fr:p></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+toc="true"
+numbered="false"
+show-heading="true"
+show-metadata="true"
+expanded="false"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>258</fr:anchor><fr:addr
+type="user">random2</fr:addr><fr:route>random2.xml</fr:route><fr:title
+text="End-to-end verified compilation of floating-point heap specifications">End-to-end verified compilation of floating-point heap specifications</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p>Floating-point heap specification, for example in a separation logic, is a nontrivial problem.
+There exists logical machinery for this.</fr:p><fr:p>End-to-end behaviour conformance of floating point programs, ABSENT heap manipulation, is also a solved problem.</fr:p><fr:p>However, real-world floating-point programs obviously do not stay in local variables:they dynamically manipulate heap data structures containing floats, such as arrays and lists and trees with float.
+We would like to verify that the floating-point heap specifications at the source level pass to the target level.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree><fr:tree
+toc="true"
+numbered="false"
+show-heading="true"
+show-metadata="true"
+expanded="false"
+root="false"
+xmlns:fr="http://www.jonmsterling.com/jms-005P.xml"><fr:frontmatter><fr:anchor>259</fr:anchor><fr:addr
+type="user">week45_2026</fr:addr><fr:route>week45_2026.xml</fr:route><fr:title
+text="Weekly Report, Week 45, 2026">Weekly Report, Week 45, 2026</fr:title><fr:authors /></fr:frontmatter><fr:mainmatter><fr:p>For this week, there is progress in several directions.</fr:p><fr:p>Firstly, re-familiarised definitions of a <fr:tex
+display="inline"><![CDATA[\mathbb {K}]]></fr:tex>-fibration, in particular the case where <fr:tex
+display="inline"><![CDATA[\mathbb {K}]]></fr:tex> is a subcategory of <fr:strong>Poset</fr:strong>.
+Fibration ensures the existence and uniqueness of Cartesian liftings of morphisms in the underlying category, which is inherited by <fr:tex
+display="inline"><![CDATA[\mathbb {K}]]></fr:tex>.
+These liftings are seen concretely as a <fr:em>predicate transform</fr:em>, which connects between predicate objects in the total category.
+More generally, in effectful settings, we deal with <fr:em>Monad liftings</fr:em>, of the form <fr:tex
+display="inline"><![CDATA[(\dot  T, \dot \eta , \dot \mu )]]></fr:tex>.
+The monad lifting transforms predicates into certain effectful versions.
+From this background, one can perform weakest precondition calculation in an effectul setting, which provides a semantic basis for Floyd-Hoare style logics.
+There is a general formula to build Cartesian monad liftings in the case of domain fibrations, and an associated wp operator.
+This is presented rather vaguely in <fr:ref
+addr="aguirre2020"
+href="aguirre2020.xml"
+taxon="Paper" /> as <fr:tex
+display="inline"><![CDATA[\tau  \circ  \Phi  \circ  f]]></fr:tex>, but in more detail in the followup journal version.</fr:p><fr:p>Secondly, the work of John Li on a probabilistic separation logic <fr:ref
+addr="li2021"
+href="li2021.xml"
+taxon="Paper" /> is investigated.
+Understand that discrete conditioning is viewed as modal operator, and independence can be viewed as separation.
+In this sense, random variable is seen as resource ownership, with possibly the same underlying probability space.
+His recent ambition is to develop wp for free in the sense of <fr:ref
+addr="aguirre2020"
+href="aguirre2020.xml"
+taxon="Paper" />.</fr:p><fr:p>Thirdly, the work of Justin Hsu on probabilistic relational Hoare logic is investigated.
+The workings of pRHL in constructing couplings syntactically, is understood.
+In addition, several examples are worked out, including equivalence of output distributions, stochastic dominance, and (more briefly) convergence.
+There is suspiciously no mention of a weakest precondition calculus.
+I wonder if such calculus can be constructed and given a categorical wp interpretation in the sense of Aguirre.</fr:p><fr:p>Fourthly, I started to introduce a Hoare logic for reasoning with higher-order functional invariants in probabilistic programs.
+The inspiration comes from a recent proof of tail bound for the CVM algorithm <fr:ref
+addr="karayel2025"
+href="karayel2025.xml" />.
+Logical formulas of the form <fr:tex
+display="inline"><![CDATA[C \models  \forall  h\in  SomeFuncSet. E[h(X)] \leq  g(h)]]></fr:tex>, where g is some simple transformation on h.
+This would automatically generalize the usual Chernoff bounds; in fact judgments of this form is a realization of Cramer-Chernoff method.
+This would easily generalize a few useful identities in the first-order Hoare logic and its pre-expectation calculus.
+After this logic is introduced (including its assertion language and proof rules), a next step is to proof soundness and completeness with respect to some semantics.
+In particular, completeness is harder.
+Possible semantic models include the Schanuel topos and the BI-hyperdoctrine.
+They would be interesting to implement because of the probabilistic content.</fr:p></fr:mainmatter><fr:backmatter /></fr:tree></fr:mainmatter><fr:backmatter /></fr:tree></fr:backmatter></fr:tree>
