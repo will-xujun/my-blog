@@ -29,8 +29,16 @@ jobs:
           ocaml-compiler: 5.3
           dune-cache: true
 
+      - name: Pin compatible LSP version
+        run: |
+          opam pin add lsp 1.23.1 --kind version --yes
+
       - name: Install Forester
-        run: opam install forester 'lsp<1.24'
+        run: |
+          opam install forester --yes
+      
+      - name: Install Forester
+        run: opam install forester
 
       - name: Build forest
         run: |
