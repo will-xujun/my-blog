@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<?xml-stylesheet type="text/xsl" href="/my-blogdefault.xsl"?>
 <fr:tree
 xmlns:fr="http://www.forester-notes.org"
 xmlns:html="http://www.w3.org/1999/xhtml"
 xmlns:xml="http://www.w3.org/XML/1998/namespace"
 root="true"
-base-url="/"><fr:frontmatter><fr:authors /><fr:uri>https://www.my-great-forest.net/index/</fr:uri><fr:display-uri>index</fr:display-uri><fr:route>/index/</fr:route><fr:title
-text="Xu Jun">Xu Jun</fr:title></fr:frontmatter><fr:mainmatter><html:p>Fuckyou, I am a researcher in program semantics and verification.
+base-url="/my-blog"><fr:frontmatter><fr:authors /><fr:uri>https://will-xujun.github.io/index/</fr:uri><fr:display-uri>https://will-xujun.github.io/index</fr:display-uri><fr:route>/index/</fr:route><fr:title
+text="Xu Jun">Xu Jun</fr:title></fr:frontmatter><fr:mainmatter><html:p>I am a researcher in program semantics and verification.
 
 This blog documents my scientific ideas in various topics.</html:p><html:p>
 A general theme is to provide unifying semantic guarantees for probabilistic programs and their associated logics.
@@ -31,18 +31,18 @@ I hope to answer as many of these questions as possible in the next 3 years.
 </html:p><html:strong>Weekly Notes</html:strong><html:p><fr:link
 href="/week45_2026/"
 title="Weekly Report, Week 45, 2026"
-uri="https://www.my-great-forest.net/week45_2026/"
-display-uri="week45_2026"
+uri="https://will-xujun.github.io/week45_2026/"
+display-uri="https://will-xujun.github.io/week45_2026"
 type="local">Week45_2026</fr:link></html:p><html:strong>Wild Ideas for Research</html:strong><html:p><fr:link
 href="/random1/"
 title="Algebraic Semantics and Categorical Characterization of Program Logics"
-uri="https://www.my-great-forest.net/random1/"
-display-uri="random1"
+uri="https://will-xujun.github.io/random1/"
+display-uri="https://will-xujun.github.io/random1"
 type="local">Algebraic Semantics and Categorical Characterization of Program Logics</fr:link></html:p><html:p><fr:link
 href="/random2/"
 title="End-to-end verified compilation of floating-point heap specifications"
-uri="https://www.my-great-forest.net/random2/"
-display-uri="random2"
+uri="https://will-xujun.github.io/random2/"
+display-uri="https://will-xujun.github.io/random2"
 type="local">Floating-point Separation Logic Specification Compilation</fr:link></html:p></fr:mainmatter><fr:backmatter><fr:tree
 show-metadata="false"
 hidden-when-empty="true"><fr:frontmatter><fr:authors /><fr:title
@@ -59,7 +59,7 @@ text="Related">Related</fr:title></fr:frontmatter><fr:mainmatter><fr:tree
 show-metadata="true"
 expanded="false"
 toc="false"
-numbered="false"><fr:frontmatter><fr:authors /><fr:uri>https://www.my-great-forest.net/random1/</fr:uri><fr:display-uri>random1</fr:display-uri><fr:route>/random1/</fr:route><fr:title
+numbered="false"><fr:frontmatter><fr:authors /><fr:uri>https://will-xujun.github.io/random1/</fr:uri><fr:display-uri>https://will-xujun.github.io/random1</fr:display-uri><fr:route>/random1/</fr:route><fr:title
 text="Algebraic Semantics and Categorical Characterization of Program Logics">Algebraic Semantics and Categorical Characterization of Program Logics</fr:title></fr:frontmatter><fr:mainmatter><html:p>There is a duality between categorical constructs and logical systems.
 For propositional logic, the Stone duality states an isomorphism between presentations of Boolean algebras (quotients of the free Boolean algebra of a given signature) and logical systems in that signature.
 For Hoare and separation logics, however, there is no such categorical account.
@@ -67,7 +67,7 @@ What should such an account look like?</html:p></fr:mainmatter></fr:tree><fr:tre
 show-metadata="true"
 expanded="false"
 toc="false"
-numbered="false"><fr:frontmatter><fr:authors /><fr:uri>https://www.my-great-forest.net/random2/</fr:uri><fr:display-uri>random2</fr:display-uri><fr:route>/random2/</fr:route><fr:title
+numbered="false"><fr:frontmatter><fr:authors /><fr:uri>https://will-xujun.github.io/random2/</fr:uri><fr:display-uri>https://will-xujun.github.io/random2</fr:display-uri><fr:route>/random2/</fr:route><fr:title
 text="End-to-end verified compilation of floating-point heap specifications">End-to-end verified compilation of floating-point heap specifications</fr:title></fr:frontmatter><fr:mainmatter><html:p>
 Floating-point heap specification, for example in a separation logic, is a nontrivial problem.
 There exists logical machinery for this.
@@ -80,7 +80,7 @@ We would like to verify that the floating-point heap specifications at the sourc
 show-metadata="true"
 expanded="false"
 toc="false"
-numbered="false"><fr:frontmatter><fr:authors /><fr:uri>https://www.my-great-forest.net/week45_2026/</fr:uri><fr:display-uri>week45_2026</fr:display-uri><fr:route>/week45_2026/</fr:route><fr:title
+numbered="false"><fr:frontmatter><fr:authors /><fr:uri>https://will-xujun.github.io/week45_2026/</fr:uri><fr:display-uri>https://will-xujun.github.io/week45_2026</fr:display-uri><fr:route>/week45_2026/</fr:route><fr:title
 text="Weekly Report, Week 45, 2026">Weekly Report, Week 45, 2026</fr:title></fr:frontmatter><fr:mainmatter><html:p>
 For this week, there is progress in several directions.
 </html:p><html:p>
@@ -98,31 +98,31 @@ There is a general formula to build Cartesian monad liftings in the case of doma
 This is presented rather vaguely in <fr:link
 href="/aguirre2020/"
 title="Weakest preconditions in fibrations"
-uri="https://www.my-great-forest.net/aguirre2020/"
-display-uri="aguirre2020"
+uri="https://will-xujun.github.io/aguirre2020/"
+display-uri="https://will-xujun.github.io/aguirre2020"
 type="local">paper <fr:contextual-number
-uri="https://www.my-great-forest.net/aguirre2020/"
-display-uri="aguirre2020" /></fr:link> as <fr:tex
+uri="https://will-xujun.github.io/aguirre2020/"
+display-uri="https://will-xujun.github.io/aguirre2020" /></fr:link> as <fr:tex
 display="inline"><![CDATA[\tau  \circ  \Phi  \circ  f]]></fr:tex>, but in more detail in the followup journal version.
 </html:p><html:p>
 Secondly, the work of John Li on a probabilistic separation logic <fr:link
 href="/li2021/"
 title="Lilac: A Modal Separation Logic for Conditional Probability"
-uri="https://www.my-great-forest.net/li2021/"
-display-uri="li2021"
+uri="https://will-xujun.github.io/li2021/"
+display-uri="https://will-xujun.github.io/li2021"
 type="local">paper <fr:contextual-number
-uri="https://www.my-great-forest.net/li2021/"
-display-uri="li2021" /></fr:link> is investigated.
+uri="https://will-xujun.github.io/li2021/"
+display-uri="https://will-xujun.github.io/li2021" /></fr:link> is investigated.
 Understand that discrete conditioning is viewed as modal operator, and independence can be viewed as separation.
 In this sense, random variable is seen as resource ownership, with possibly the same underlying probability space.
 His recent ambition is to develop wp for free in the sense of <fr:link
 href="/aguirre2020/"
 title="Weakest preconditions in fibrations"
-uri="https://www.my-great-forest.net/aguirre2020/"
-display-uri="aguirre2020"
+uri="https://will-xujun.github.io/aguirre2020/"
+display-uri="https://will-xujun.github.io/aguirre2020"
 type="local">paper <fr:contextual-number
-uri="https://www.my-great-forest.net/aguirre2020/"
-display-uri="aguirre2020" /></fr:link>.
+uri="https://will-xujun.github.io/aguirre2020/"
+display-uri="https://will-xujun.github.io/aguirre2020" /></fr:link>.
 </html:p><html:p>
 Thirdly, the work of Justin Hsu on probabilistic relational Hoare logic is investigated.
 The workings of pRHL in constructing couplings syntactically, is understood.
@@ -135,11 +135,11 @@ The inspiration comes from a recent proof of tail bound for the CVM algorithm <f
 href="/karayel2025/"
 title="Verification of the CVM Algorithm with a
 Functional Probabilistic Invariant"
-uri="https://www.my-great-forest.net/karayel2025/"
-display-uri="karayel2025"
+uri="https://will-xujun.github.io/karayel2025/"
+display-uri="https://will-xujun.github.io/karayel2025"
 type="local">§ <fr:contextual-number
-uri="https://www.my-great-forest.net/karayel2025/"
-display-uri="karayel2025" /></fr:link>.
+uri="https://will-xujun.github.io/karayel2025/"
+display-uri="https://will-xujun.github.io/karayel2025" /></fr:link>.
 Logical formulas of the form <fr:tex
 display="inline"><![CDATA[C \models  \forall  h\in  SomeFuncSet. E[h(X)] \leq  g(h)]]></fr:tex>, where g is some simple transformation on h.
 This would automatically generalize the usual Chernoff bounds; in fact judgments of this form is a realization of Cramer-Chernoff method.

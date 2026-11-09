@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/my-blog/default.xsl"?>
+<fr:tree
+xmlns:fr="http://www.forester-notes.org"
+xmlns:html="http://www.w3.org/1999/xhtml"
+xmlns:xml="http://www.w3.org/XML/1998/namespace"
+root="false"
+base-url="/my-blog/"><fr:frontmatter><fr:authors><fr:author><fr:link
+href="https://will-xujun.github.io/my-blog/John%20m.%20Li,%20Amal%20Ahmed,%20Steven%20Holtzen"
+type="external">John m. Li, Amal Ahmed, Steven Holtzen</fr:link></fr:author></fr:authors><fr:date><fr:year>2023</fr:year></fr:date><fr:uri>https://will-xujun.github.io/my-blog/li2021/</fr:uri><fr:display-uri>li2021</fr:display-uri><fr:route>/my-blog/li2021/</fr:route><fr:title
+text="Lilac: A Modal Separation Logic for Conditional Probability">Lilac: A Modal Separation Logic for Conditional Probability</fr:title><fr:taxon>paper</fr:taxon></fr:frontmatter><fr:mainmatter /><fr:backmatter><fr:tree
+show-metadata="false"
+hidden-when-empty="true"><fr:frontmatter><fr:authors /><fr:title
+text="References">References</fr:title></fr:frontmatter><fr:mainmatter /></fr:tree><fr:tree
+show-metadata="false"
+hidden-when-empty="true"><fr:frontmatter><fr:authors /><fr:title
+text="Context">Context</fr:title></fr:frontmatter><fr:mainmatter /></fr:tree><fr:tree
+show-metadata="false"
+hidden-when-empty="true"><fr:frontmatter><fr:authors /><fr:title
+text="Backlinks">Backlinks</fr:title></fr:frontmatter><fr:mainmatter><fr:tree
+show-metadata="true"
+expanded="false"
+toc="false"
+numbered="false"><fr:frontmatter><fr:authors /><fr:uri>https://will-xujun.github.io/my-blog/week45_2026/</fr:uri><fr:display-uri>week45_2026</fr:display-uri><fr:route>/my-blog/week45_2026/</fr:route><fr:title
+text="Weekly Report, Week 45, 2026">Weekly Report, Week 45, 2026</fr:title></fr:frontmatter><fr:mainmatter><html:p>
+For this week, there is progress in several directions.
+</html:p><html:p>
+Firstly, re-familiarised definitions of a <fr:tex
+display="inline"><![CDATA[\mathbb {K}]]></fr:tex>-fibration, in particular the case where <fr:tex
+display="inline"><![CDATA[\mathbb {K}]]></fr:tex> is a subcategory of <html:strong>Poset</html:strong>.
+Fibration ensures the existence and uniqueness of Cartesian liftings of morphisms in the underlying category, which is inherited by <fr:tex
+display="inline"><![CDATA[\mathbb {K}]]></fr:tex>.
+These liftings are seen concretely as a <html:em>predicate transform</html:em>, which connects between predicate objects in the total category.
+More generally, in effectful settings, we deal with <html:em>Monad liftings</html:em>, of the form <fr:tex
+display="inline"><![CDATA[(\dot  T, \dot \eta , \dot \mu )]]></fr:tex>.
+The monad lifting transforms predicates into certain effectful versions.
+From this background, one can perform weakest precondition calculation in an effectul setting, which provides a semantic basis for Floyd-Hoare style logics.
+There is a general formula to build Cartesian monad liftings in the case of domain fibrations, and an associated wp operator.
+This is presented rather vaguely in <fr:link
+href="/my-blog/aguirre2020/"
+title="Weakest preconditions in fibrations"
+uri="https://will-xujun.github.io/my-blog/aguirre2020/"
+display-uri="aguirre2020"
+type="local">paper <fr:contextual-number
+uri="https://will-xujun.github.io/my-blog/aguirre2020/"
+display-uri="aguirre2020" /></fr:link> as <fr:tex
+display="inline"><![CDATA[\tau  \circ  \Phi  \circ  f]]></fr:tex>, but in more detail in the followup journal version.
+</html:p><html:p>
+Secondly, the work of John Li on a probabilistic separation logic <fr:link
+href="/my-blog/li2021/"
+title="Lilac: A Modal Separation Logic for Conditional Probability"
+uri="https://will-xujun.github.io/my-blog/li2021/"
+display-uri="li2021"
+type="local">paper <fr:contextual-number
+uri="https://will-xujun.github.io/my-blog/li2021/"
+display-uri="li2021" /></fr:link> is investigated.
+Understand that discrete conditioning is viewed as modal operator, and independence can be viewed as separation.
+In this sense, random variable is seen as resource ownership, with possibly the same underlying probability space.
+His recent ambition is to develop wp for free in the sense of <fr:link
+href="/my-blog/aguirre2020/"
+title="Weakest preconditions in fibrations"
+uri="https://will-xujun.github.io/my-blog/aguirre2020/"
+display-uri="aguirre2020"
+type="local">paper <fr:contextual-number
+uri="https://will-xujun.github.io/my-blog/aguirre2020/"
+display-uri="aguirre2020" /></fr:link>.
+</html:p><html:p>
+Thirdly, the work of Justin Hsu on probabilistic relational Hoare logic is investigated.
+The workings of pRHL in constructing couplings syntactically, is understood.
+In addition, several examples are worked out, including equivalence of output distributions, stochastic dominance, and (more briefly) convergence.
+There is suspiciously no mention of a weakest precondition calculus.
+I wonder if such calculus can be constructed and given a categorical wp interpretation in the sense of Aguirre.
+</html:p><html:p>
+Fourthly, I started to introduce a Hoare logic for reasoning with higher-order functional invariants in probabilistic programs.
+The inspiration comes from a recent proof of tail bound for the CVM algorithm <fr:link
+href="/my-blog/karayel2025/"
+title="Verification of the CVM Algorithm with a
+Functional Probabilistic Invariant"
+uri="https://will-xujun.github.io/my-blog/karayel2025/"
+display-uri="karayel2025"
+type="local">§ <fr:contextual-number
+uri="https://will-xujun.github.io/my-blog/karayel2025/"
+display-uri="karayel2025" /></fr:link>.
+Logical formulas of the form <fr:tex
+display="inline"><![CDATA[C \models  \forall  h\in  SomeFuncSet. E[h(X)] \leq  g(h)]]></fr:tex>, where g is some simple transformation on h.
+This would automatically generalize the usual Chernoff bounds; in fact judgments of this form is a realization of Cramer-Chernoff method.
+This would easily generalize a few useful identities in the first-order Hoare logic and its pre-expectation calculus.
+After this logic is introduced (including its assertion language and proof rules), a next step is to proof soundness and completeness with respect to some semantics.
+In particular, completeness is harder.
+Possible semantic models include the Schanuel topos and the BI-hyperdoctrine.
+They would be interesting to implement because of the probabilistic content.
+</html:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree
+show-metadata="false"
+hidden-when-empty="true"><fr:frontmatter><fr:authors /><fr:title
+text="Related">Related</fr:title></fr:frontmatter><fr:mainmatter /></fr:tree><fr:tree
+show-metadata="false"
+hidden-when-empty="true"><fr:frontmatter><fr:authors /><fr:title
+text="Contributions">Contributions</fr:title></fr:frontmatter><fr:mainmatter /></fr:tree></fr:backmatter></fr:tree>

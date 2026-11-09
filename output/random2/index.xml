@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<?xml-stylesheet type="text/xsl" href="/my-blogdefault.xsl"?>
 <fr:tree
 xmlns:fr="http://www.forester-notes.org"
 xmlns:html="http://www.w3.org/1999/xhtml"
 xmlns:xml="http://www.w3.org/XML/1998/namespace"
 root="false"
-base-url="/"><fr:frontmatter><fr:authors /><fr:uri>https://www.my-great-forest.net/random2/</fr:uri><fr:display-uri>random2</fr:display-uri><fr:route>/random2/</fr:route><fr:title
+base-url="/my-blog"><fr:frontmatter><fr:authors /><fr:uri>https://will-xujun.github.io/random2/</fr:uri><fr:display-uri>https://will-xujun.github.io/random2</fr:display-uri><fr:route>/random2/</fr:route><fr:title
 text="End-to-end verified compilation of floating-point heap specifications">End-to-end verified compilation of floating-point heap specifications</fr:title></fr:frontmatter><fr:mainmatter><html:p>
 Floating-point heap specification, for example in a separation logic, is a nontrivial problem.
 There exists logical machinery for this.
@@ -27,8 +27,8 @@ text="Backlinks">Backlinks</fr:title></fr:frontmatter><fr:mainmatter><fr:tree
 show-metadata="true"
 expanded="false"
 toc="false"
-numbered="false"><fr:frontmatter><fr:authors /><fr:uri>https://www.my-great-forest.net/index/</fr:uri><fr:display-uri>index</fr:display-uri><fr:route>/index/</fr:route><fr:title
-text="Xu Jun">Xu Jun</fr:title></fr:frontmatter><fr:mainmatter><html:p>Fuckyou, I am a researcher in program semantics and verification.
+numbered="false"><fr:frontmatter><fr:authors /><fr:uri>https://will-xujun.github.io/index/</fr:uri><fr:display-uri>https://will-xujun.github.io/index</fr:display-uri><fr:route>/index/</fr:route><fr:title
+text="Xu Jun">Xu Jun</fr:title></fr:frontmatter><fr:mainmatter><html:p>I am a researcher in program semantics and verification.
 
 This blog documents my scientific ideas in various topics.</html:p><html:p>
 A general theme is to provide unifying semantic guarantees for probabilistic programs and their associated logics.
@@ -53,18 +53,18 @@ I hope to answer as many of these questions as possible in the next 3 years.
 </html:p><html:strong>Weekly Notes</html:strong><html:p><fr:link
 href="/week45_2026/"
 title="Weekly Report, Week 45, 2026"
-uri="https://www.my-great-forest.net/week45_2026/"
-display-uri="week45_2026"
+uri="https://will-xujun.github.io/week45_2026/"
+display-uri="https://will-xujun.github.io/week45_2026"
 type="local">Week45_2026</fr:link></html:p><html:strong>Wild Ideas for Research</html:strong><html:p><fr:link
 href="/random1/"
 title="Algebraic Semantics and Categorical Characterization of Program Logics"
-uri="https://www.my-great-forest.net/random1/"
-display-uri="random1"
+uri="https://will-xujun.github.io/random1/"
+display-uri="https://will-xujun.github.io/random1"
 type="local">Algebraic Semantics and Categorical Characterization of Program Logics</fr:link></html:p><html:p><fr:link
 href="/random2/"
 title="End-to-end verified compilation of floating-point heap specifications"
-uri="https://www.my-great-forest.net/random2/"
-display-uri="random2"
+uri="https://will-xujun.github.io/random2/"
+display-uri="https://will-xujun.github.io/random2"
 type="local">Floating-point Separation Logic Specification Compilation</fr:link></html:p></fr:mainmatter></fr:tree></fr:mainmatter></fr:tree><fr:tree
 show-metadata="false"
 hidden-when-empty="true"><fr:frontmatter><fr:authors /><fr:title

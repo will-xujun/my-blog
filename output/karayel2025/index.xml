@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/default.xsl"?>
+<?xml-stylesheet type="text/xsl" href="/my-blogdefault.xsl"?>
 <fr:tree
 xmlns:fr="http://www.forester-notes.org"
 xmlns:html="http://www.w3.org/1999/xhtml"
 xmlns:xml="http://www.w3.org/XML/1998/namespace"
 root="false"
-base-url="/"><fr:frontmatter><fr:authors><fr:author><fr:link
-href="https://www.my-great-forest.net/Karayel%20et%20al."
-type="external">Karayel et al.</fr:link></fr:author></fr:authors><fr:date><fr:year>2025</fr:year></fr:date><fr:uri>https://www.my-great-forest.net/karayel2025/</fr:uri><fr:display-uri>karayel2025</fr:display-uri><fr:route>/karayel2025/</fr:route><fr:title
+base-url="/my-blog"><fr:frontmatter><fr:authors><fr:author><fr:link
+href="https://will-xujun.github.io/Karayel%20et%20al."
+type="external">https://will-xujun.github.io/Karayel et al.</fr:link></fr:author></fr:authors><fr:date><fr:year>2025</fr:year></fr:date><fr:uri>https://will-xujun.github.io/karayel2025/</fr:uri><fr:display-uri>https://will-xujun.github.io/karayel2025</fr:display-uri><fr:route>/karayel2025/</fr:route><fr:title
 text="Verification of the CVM Algorithm with a
 Functional Probabilistic Invariant">Verification of the CVM Algorithm with a
 Functional Probabilistic Invariant</fr:title></fr:frontmatter><fr:mainmatter /><fr:backmatter><fr:tree
@@ -23,7 +23,7 @@ text="Backlinks">Backlinks</fr:title></fr:frontmatter><fr:mainmatter><fr:tree
 show-metadata="true"
 expanded="false"
 toc="false"
-numbered="false"><fr:frontmatter><fr:authors /><fr:uri>https://www.my-great-forest.net/week45_2026/</fr:uri><fr:display-uri>week45_2026</fr:display-uri><fr:route>/week45_2026/</fr:route><fr:title
+numbered="false"><fr:frontmatter><fr:authors /><fr:uri>https://will-xujun.github.io/week45_2026/</fr:uri><fr:display-uri>https://will-xujun.github.io/week45_2026</fr:display-uri><fr:route>/week45_2026/</fr:route><fr:title
 text="Weekly Report, Week 45, 2026">Weekly Report, Week 45, 2026</fr:title></fr:frontmatter><fr:mainmatter><html:p>
 For this week, there is progress in several directions.
 </html:p><html:p>
@@ -41,31 +41,31 @@ There is a general formula to build Cartesian monad liftings in the case of doma
 This is presented rather vaguely in <fr:link
 href="/aguirre2020/"
 title="Weakest preconditions in fibrations"
-uri="https://www.my-great-forest.net/aguirre2020/"
-display-uri="aguirre2020"
+uri="https://will-xujun.github.io/aguirre2020/"
+display-uri="https://will-xujun.github.io/aguirre2020"
 type="local">paper <fr:contextual-number
-uri="https://www.my-great-forest.net/aguirre2020/"
-display-uri="aguirre2020" /></fr:link> as <fr:tex
+uri="https://will-xujun.github.io/aguirre2020/"
+display-uri="https://will-xujun.github.io/aguirre2020" /></fr:link> as <fr:tex
 display="inline"><![CDATA[\tau  \circ  \Phi  \circ  f]]></fr:tex>, but in more detail in the followup journal version.
 </html:p><html:p>
 Secondly, the work of John Li on a probabilistic separation logic <fr:link
 href="/li2021/"
 title="Lilac: A Modal Separation Logic for Conditional Probability"
-uri="https://www.my-great-forest.net/li2021/"
-display-uri="li2021"
+uri="https://will-xujun.github.io/li2021/"
+display-uri="https://will-xujun.github.io/li2021"
 type="local">paper <fr:contextual-number
-uri="https://www.my-great-forest.net/li2021/"
-display-uri="li2021" /></fr:link> is investigated.
+uri="https://will-xujun.github.io/li2021/"
+display-uri="https://will-xujun.github.io/li2021" /></fr:link> is investigated.
 Understand that discrete conditioning is viewed as modal operator, and independence can be viewed as separation.
 In this sense, random variable is seen as resource ownership, with possibly the same underlying probability space.
 His recent ambition is to develop wp for free in the sense of <fr:link
 href="/aguirre2020/"
 title="Weakest preconditions in fibrations"
-uri="https://www.my-great-forest.net/aguirre2020/"
-display-uri="aguirre2020"
+uri="https://will-xujun.github.io/aguirre2020/"
+display-uri="https://will-xujun.github.io/aguirre2020"
 type="local">paper <fr:contextual-number
-uri="https://www.my-great-forest.net/aguirre2020/"
-display-uri="aguirre2020" /></fr:link>.
+uri="https://will-xujun.github.io/aguirre2020/"
+display-uri="https://will-xujun.github.io/aguirre2020" /></fr:link>.
 </html:p><html:p>
 Thirdly, the work of Justin Hsu on probabilistic relational Hoare logic is investigated.
 The workings of pRHL in constructing couplings syntactically, is understood.
@@ -78,11 +78,11 @@ The inspiration comes from a recent proof of tail bound for the CVM algorithm <f
 href="/karayel2025/"
 title="Verification of the CVM Algorithm with a
 Functional Probabilistic Invariant"
-uri="https://www.my-great-forest.net/karayel2025/"
-display-uri="karayel2025"
+uri="https://will-xujun.github.io/karayel2025/"
+display-uri="https://will-xujun.github.io/karayel2025"
 type="local">§ <fr:contextual-number
-uri="https://www.my-great-forest.net/karayel2025/"
-display-uri="karayel2025" /></fr:link>.
+uri="https://will-xujun.github.io/karayel2025/"
+display-uri="https://will-xujun.github.io/karayel2025" /></fr:link>.
 Logical formulas of the form <fr:tex
 display="inline"><![CDATA[C \models  \forall  h\in  SomeFuncSet. E[h(X)] \leq  g(h)]]></fr:tex>, where g is some simple transformation on h.
 This would automatically generalize the usual Chernoff bounds; in fact judgments of this form is a realization of Cramer-Chernoff method.
