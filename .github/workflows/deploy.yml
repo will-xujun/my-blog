@@ -47,6 +47,7 @@ jobs:
         run: opam install forester.5.0 lsp.1.23.1
 
       - name: build with Forester
+        working-directory: my-blog
         run: opam exec -- forester build
 
       - name: Checkout repository
