@@ -47,7 +47,7 @@ jobs:
         run: opam install forester.5.0 lsp.1.23.1
 
       - name: build with Forester
-        run: forester build
+        run: opam exec -- forester build
 
       - name: Checkout repository
         uses: actions/checkout@v6
