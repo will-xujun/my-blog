@@ -27,6 +27,27 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+      - name: Install TeX Live
+              uses: zauguin/install-texlive@v4
+              with:
+                texlive_version: 2025
+                packages: >
+                  scheme-basic standalone preview dvisvgm amsfonts amsmath
+                  amscls cclicenses enumitem etoolbox hyperref mathpartir
+                  ebproof quiver pgf spath3 mathtools microtype stmaryrd
+                  thmtools tikz-cd tikz-nfold xcolor
+      
+      - name: Setup OCaml
+              uses: ocaml/setup-ocaml@v3
+              with:
+                # Forester 5.0 requires OCaml >= 5.3.0
+                ocaml-compiler: 5.3
+                dune-cache: true
+
+      - name: Install Forester
+              # Pinning the version ensures we get 5.0 or fail if incompatible
+              run: opam install forester.5.0
+
       - name: Checkout repository
         uses: actions/checkout@v6
 

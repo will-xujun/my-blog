@@ -1,0 +1,34 @@
+\title{Weekly Report, Week 45, 2026}
+
+\p{
+For this week, there is good progress on the Hoare weakest preexpectation logic for probabilistic tail bounds.
+I have fixed the following languages: 
+(1) An expression/command imperative programming language in the form of pGCL, with random Bernoulli assignment by variable probability. 
+This is standard formulation in some variants but extends Batz's pGCL, which only supports branching by a fixed numerical probability.
+(2) An expression language for random variables.
+(3) An assertion language for expressing inequalities
+(4) A logical system supporting Hoare judgments and propositional judgments.
+}
+
+\p{
+The proof rules for this logic is still to be developed.
+However, I now have a weakest-preexpectation transformer in the form of a pullback on random variables.
+The basic property of this pullback is such that expectation of the pullback (by a command kernel) in this stage equals the expectation of the original random variable in stage after the kernel executes.
+Proving that a random variable satisfies some constraints after executing a command is equivalent to proving that the transformed variable satisfies the constraint now.
+This transformer comes directly from Batz's work, and is attributed to Kozen.
+There is analogous Kozen backwards-forwards semantic duality theorem to be proved.
+}
+
+\p{
+More importantly, Batz's work is mostly about \strong{expressiveness}.
+This implies they try to take a minimal expression language and try to simulate many syntactic constructs, e.g. sequences, sets, products within it.
+This reduces proof obligations for expressiveness because there are fewer cases to check.
+The disadvantage of this approach for verification is not many constructs are readily available to describe measurable functions, which is inconvenient.
+In my expression language I try to provide more constructs.
+I observe that the expressiveness theorem is in fact a soundness theorem of a syntactic transformer, if we allow enough constructs (to be proved).
+Curiously, this raises a vague question of what's a good language for expressing the measurable functions that makes it enough to describe a class of them for different verification purpose.
+}
+
+
+
+
