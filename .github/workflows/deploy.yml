@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'output/**'
+      - '**'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
@@ -27,7 +27,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Install TeX Live
+ 
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+     - name: Install TeX Live
         uses: zauguin/install-texlive@v4
         with:
           texlive_version: 2025
@@ -53,11 +57,7 @@ jobs:
           find . -name forest.toml
 
       - name: build with Forester
-        working-directory: my-blog
         run: opam exec -- forester build
-
-      - name: Checkout repository
-        uses: actions/checkout@v6
 
       - name: Upload website artifact
         uses: actions/upload-pages-artifact@v3
